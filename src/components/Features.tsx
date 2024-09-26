@@ -77,7 +77,6 @@ function Features({ setCurrentPage }: FeaturesProps) {
 
   const handleSurveyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Survey button clicked'); // Debug log
     setCurrentPage('survey');
   };
 

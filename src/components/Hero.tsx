@@ -10,7 +10,6 @@ function Hero({ setCurrentPage }: HeroProps) {
 
   const handleSurveyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Survey button clicked'); // Debug log
     setCurrentPage('survey');
   };
 
@@ -35,14 +34,14 @@ function Hero({ setCurrentPage }: HeroProps) {
                 onClick={handleSurveyClick}
                 className="inline-block bg-white text-flow-vibrant-green px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-pulse cursor-pointer z-10 relative"
               >
-                Unete a nuestra lista de espera
+                Registrarme en Flow
               </button>
               <div className="flex items-start text-sm sm:text-base text-white">
                 <svg className="w-5 h-5 mr-2 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                 </svg>
-                <p className="text-left">
-                  ¡Responde unas preguntas y participa por uno de los 5 bonos de combustible por $100.000 pesos!
+                <p className="text-left bold">
+                  Regístrate y participa por uno de los 5 bonos de combustible por $100.000 pesos!
                 </p>
               </div>
             </div>

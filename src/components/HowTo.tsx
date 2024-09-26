@@ -10,7 +10,6 @@ function HowTo({ setCurrentPage }: HowToProps) {
 
   const handleSurveyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Survey button clicked'); // Debug log
     setCurrentPage('survey');
   };
 

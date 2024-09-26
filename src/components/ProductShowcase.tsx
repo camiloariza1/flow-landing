@@ -12,10 +12,9 @@ interface ProductInfo {
 }
 
 const flowProducts: ProductInfo[] = [
-  { name: 'Flow Inversiones', description: 'Invierte de manera inteligente y segura', icon: '📈' },
-  { name: 'Flow Préstamos', description: 'Obtén el capital que necesitas rápidamente', icon: '💰' },
-  { name: 'Flow Ahorro', description: 'Haz crecer tu dinero con tasas competitivas', icon: '🏦' },
-  { name: 'Flow Asesoría', description: 'Recibe orientación financiera personalizada', icon: '🤝' }
+  { name: 'Flow Mobility', description: 'Invierte de manera inteligente y segura', icon: '📈' },
+  { name: 'Flow Seguros y pólizas', description: 'Obtén el capital que necesitas rápidamente', icon: '💰' },
+  { name: 'Flow Gasolina y consumibles', description: 'Haz crecer tu dinero con tasas competitivas', icon: '🏦' },
 ];
 
 const ProductShowcase: React.FC<ProductShowcaseProps> = ({ setCurrentPage }) => {
@@ -23,7 +22,6 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ setCurrentPage }) => 
 
   const handleSurveyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Survey button clicked'); // Debug log
     setCurrentPage('survey');
   };
 
@@ -35,7 +33,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({ setCurrentPage }) => 
       <div className={`container mx-auto px-4 relative z-10 transition-opacity duration-1000 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-flow-accent">Descubre el poder de Flow</h2>
         <p className="text-center mb-12 sm:mb-16 text-lg sm:text-xl max-w-3xl mx-auto">Soluciones financieras innovadoras diseñadas para impulsar tu éxito y transformar tu futuro económico.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {flowProducts.map((product, index) => (
             <div key={index} className="bg-flow-light-navy p-6 sm:p-8 rounded-xl text-center transition-all hover:scale-105 hover:shadow-xl duration-300 border border-flow-accent">
               <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-flow-accent to-flow-accent-light rounded-full mx-auto mb-6 flex items-center justify-center text-4xl">

@@ -7,7 +7,6 @@ interface CallToActionProps {
 function CallToAction({ setCurrentPage }: CallToActionProps) {
   const handleSurveyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Survey button clicked'); // Debug log
     setCurrentPage('survey');
   };
 
@@ -23,7 +22,7 @@ function CallToAction({ setCurrentPage }: CallToActionProps) {
           onClick={handleSurveyClick}
           className="bg-flow-vibrant-green text-white font-bold py-2 px-4 sm:px-6 rounded-full hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-bounce"
         >
-          Unete a nuestra lista de espera
+          Registrarme en Flow
         </button>
       </div>
       <div className="absolute top-0 left-10 w-2/3 h-full opacity-50">
