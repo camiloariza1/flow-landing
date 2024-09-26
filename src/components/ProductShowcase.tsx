@@ -12,9 +12,9 @@ interface ProductInfo {
 }
 
 const flowProducts: ProductInfo[] = [
-  { name: 'Flow Mobility', description: 'Invierte de manera inteligente y segura', icon: '📈' },
-  { name: 'Flow Seguros y pólizas', description: 'Obtén el capital que necesitas rápidamente', icon: '💰' },
-  { name: 'Flow Gasolina y consumibles', description: 'Haz crecer tu dinero con tasas competitivas', icon: '🏦' },
+  { name: 'Flow Mobility', description: 'Soluciones de transporte flexibles y asequibles para tu día a día.', icon: '🚗' },
+  { name: 'Flow Seguros y pólizas', description: 'Protección integral para ti y tus bienes con planes personalizados.', icon: '🛡️' },
+  { name: 'Flow Gasolina y consumibles', description: 'Financia tus gastos de combustible y mantenimiento vehicular.', icon: '⛽' },
 ];
 
 const ProductShowcase: React.FC<ProductShowcaseProps> = ({ setCurrentPage }) => {
