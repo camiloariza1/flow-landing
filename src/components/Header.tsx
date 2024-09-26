@@ -7,8 +7,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ setCurrentPage, currentPage }: HeaderProps) => {
     const navItems = [
-        { name: 'Home', key: 'home' },
-        { name: 'Survey', key: 'survey' },
+        { name: 'Pagina Principal', key: 'home' },
+        { name: 'Encuesta', key: 'survey' },
         // Add more navigation items here
     ];
 
