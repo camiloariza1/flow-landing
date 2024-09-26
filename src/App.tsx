@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HowTo from './components/HowTo';
 import Features from './components/Features';
-import Team from './components/Team';
+import ProductShowcase from './components/ProductShowcase';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import SurveyPage from './pages/Survey';
@@ -19,10 +19,10 @@ const App: React.FC = () => {
     return (
       <>
         <Hero setCurrentPage={setCurrentPage} />
-        <HowTo />
-        <Features />
-        <Team />
-        <CallToAction />
+        <HowTo setCurrentPage={setCurrentPage} />
+        <Features setCurrentPage={setCurrentPage} />
+        <ProductShowcase setCurrentPage={setCurrentPage} />
+        <CallToAction setCurrentPage={setCurrentPage} />
       </>
     );
   };

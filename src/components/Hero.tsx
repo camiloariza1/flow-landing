@@ -25,7 +25,7 @@ function Hero({ setCurrentPage }: HeroProps) {
           </div>
           <div className="w-full lg:w-2/3 space-y-6 text-left mt-16 sm:mt-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Empoderando tu movilidad
+              Muévete ahora, paga después
             </h1>
             <p className="text-xl sm:text-2xl text-white text-justify">
               Bienvenido a bordo de Flow Capital, tu socio de confianza en transacciones financieras. Automatizamos la navegación financiera para que puedas concentrarte en avanzar rápido.

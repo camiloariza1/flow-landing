@@ -6,6 +6,10 @@ interface FeatureProps {
   description: string;
 }
 
+interface FeaturesProps {
+  setCurrentPage: (page: string) => void;
+}
+
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
   <div className="bg-white rounded-lg p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:bg-gray-50">
     <div className="w-16 h-16 rounded-full bg-flow-vibrant-green flex items-center justify-center mb-4 transition-transform duration-300 hover:rotate-12">
@@ -47,47 +51,56 @@ const SupportIcon = () => (
   </div>
 );
 
-function Features() {
+function Features({ setCurrentPage }: FeaturesProps) {
   const features: FeatureProps[] = [
     {
       icon: <SecurityIcon />,
-      title: "Transacciones Seguras",
-      description: "Nuestra plataforma garantiza el más alto nivel de seguridad para todas tus transacciones financieras, protegiendo tus datos y fondos."
+      title: "SOAT Y TECNOMECANICA",
+      description: "Compra tu soat y pagalo hasta en 24 cuotas"
     },
     {
       icon: <MobilityIcon />,
-      title: "Soluciones Inteligentes de Movilidad",
-      description: "Ofrecemos productos financieros a medida diseñados específicamente para el sector del transporte y la movilidad."
+      title: "LICENCIA DE CONDUCCIÓN Y COMPARENDOS",
+      description: "Financia tu licencia de conducir y tus comparendos para que puedas conducir tranquilo"
     },
     {
       icon: <AnalyticsIcon />,
-      title: "Análisis en Tiempo Real",
-      description: "Accede a análisis e insights completos para tomar decisiones informadas sobre tus finanzas de movilidad."
+      title: "GASOLINA Y CONSUMIBLES",
+      description: "Compra tu gasolina y consumibles para tu vehículo y paga hasta en 12 cuotas"
     },
     {
       icon: <SupportIcon />,
-      title: "Soporte 24/7",
-      description: "Nuestro equipo de soporte experto está disponible las 24 horas para ayudarte con cualquier consulta o problema."
+      title: "PASAJES DE TRANSPORTE PÚBLICO",
+      description: "Paga tus pasajes de transporte público y no te preocupes por el cambio"
     }
   ];
+
+  const handleSurveyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    console.log('Survey button clicked'); // Debug log
+    setCurrentPage('survey');
+  };
 
   return (
     <section className="py-20 px-8 bg-gray-100 transition-all duration-300 ease-in-out">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold mb-2 text-center"><span className="text-flow-vibrant-green">¿Cuáles son las mejores formas de potenciar tu movilidad?</span></h2>
-        <p className="text-xl text-gray-600 mb-12 text-center">Hay diferentes maneras en que Flow Capital puede mejorar tus finanzas de movilidad.</p>
+        <h2 className="text-4xl font-bold mb-2 text-center"><span className="text-flow-vibrant-green">Cuotas que se adaptan a ti</span></h2>
+        <p className="text-xl text-gray-600 mb-12 text-center">Adquiere tus productos y servicios favoritos para tu movilidad y paga hasta en 12 cuotas.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <Feature key={index} {...feature} />
           ))}
         </div>
+        <p className="text-sm text-gray-600 mb-12 text-left mt-5">*Sujeto a criterios de elegibilidad.</p>
         <div className="mt-16 text-center">
-          <p className="text-xl mb-8"><span className="text-flow-vibrant-green">
-            Para elegir qué servicio de Flow Capital conectar, determina qué aspecto de las finanzas de movilidad necesitas mejorar,
-            abre una de las aplicaciones de Flow y selecciona el servicio que mejor se adapte a tus necesidades. Es así de fácil desbloquear
-            tu potencial de movilidad y acceder a las herramientas financieras que deseas.</span>
-          </p>
-          <button className="bg-flow-vibrant-green text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-300">
+          <h2 className="text-2xl mb-8 font-semibold mb-2 justify text-gray-600">
+            Para elegir qué servicio de <span className="text-flow-vibrant-green">Flow Capital</span> conectar, determina qué aspecto de las <span className="text-flow-vibrant-green">finanzas de movilidad</span> necesitas mejorar,
+            abre una de las aplicaciones de Flow y <span className="text-flow-vibrant-green">selecciona el servicio</span> que mejor se adapte a tus necesidades. Es así de fácil <span className="text-flow-vibrant-green">desbloquear
+            tu potencial de movilidad</span> y acceder a las <span className="text-flow-vibrant-green">herramientas financieras</span> que deseas.
+          </h2>
+          <button
+          onClick={handleSurveyClick}
+          className="bg-flow-vibrant-green text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors duration-300">
             Comienza Ahora
           </button>
         </div>
